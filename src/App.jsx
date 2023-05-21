@@ -4,6 +4,8 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import { WalletHandler } from "jackal.js";
 import ChainConfig from "./data/chainInfo";
+import QrCode from "./QrCode";
+import "./styles.css"; //line 6-7 for qr code
 
 function App() {
   const [count, setCount] = useState(0);
@@ -51,6 +53,7 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <QrCode value="SampleWalletAddress"/>
     </>
   );
 }
