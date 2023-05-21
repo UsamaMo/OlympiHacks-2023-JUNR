@@ -6,6 +6,9 @@ import { WalletHandler } from "jackal.js";
 import ChainConfig from "./data/chainInfo";
 import QrCode from "./QrCode";
 import "./styles.css"; //line 6-7 for qr code
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +36,17 @@ function App() {
 
   return (
     <>
+     <div className="App">
+       <Navbar/>
+      
+      <header className="App-header">
+      <p>
+          Please Scan your Barcode
+      </p>
+      </header>
+      </div>
+      
+
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -54,6 +68,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
       <QrCode value={addr} />
+        <Footer/>
     </>
   );
 }
