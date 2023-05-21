@@ -10,7 +10,7 @@ function ProfilePage() {
           src="https://waterlooblockchain.ca/_next/image?url=%2Fgoose.png&w=1920&q=75"
           alt="Profile"
           style={{ width: "100px", height: "100px" }}
-          className="w-100 h-100 mx-auto"
+          className="w-10 h-100"
         />
       </div>
       {/* Biography */}
