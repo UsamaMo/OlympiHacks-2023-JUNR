@@ -6,6 +6,8 @@ import { WalletHandler } from "jackal.js";
 import ChainConfig from "./data/chainInfo";
 import QrCode from "./QrCode";
 import "./styles.css"; //line 6-7 for qr code
+import { Link } from "react-router-dom"; //Jacky
+
 
 function App() {
   const [count, setCount] = useState(0);
@@ -31,8 +33,13 @@ function App() {
     newRun();
   }, []);
 
+
+  
   return (
     <>
+    <h1 className="text-3xl font-bold underline">
+      Hello world!
+    </h1>
       <div>
         <a href="https://vitejs.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
@@ -46,6 +53,7 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <Link to="/profile">Go to Profile</Link>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
