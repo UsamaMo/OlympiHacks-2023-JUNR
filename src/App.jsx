@@ -1,11 +1,33 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import { WalletHandler } from "jackal.js";
+import ChainConfig from "./data/chainInfo";
 
 function App() {
   const [count, setCount] = useState(0);
+  const [addr, setAddr] = useState();
+
+  useEffect(() => {
+    const newRun = async () => {
+      const walletConfig = {
+        selectedWallet: "keplr",
+        signerChain: "jackal-1",
+        enabledChains: ["jackal-1"],
+        queryAddr: "https://grpc.jackalprotocol.com",
+        txAddr: "https://rpc.jackalprotocol.com",
+        chainConfig: ChainConfig,
+      };
+
+      const wallet = await WalletHandler.trackWallet(walletConfig);
+
+      const address = wallet.getJackalAddress();
+
+      setAddr(address);
+    };
+    newRun();
+  }, []);
 
   return (
     <>
