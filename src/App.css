@@ -1,31 +1,6 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: grey;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -39,27 +14,50 @@
   background-color: rgb(251, 5, 5);
 }
 
-
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.barcode_font{
+    font-size: 40px;
+    font-family: Berlin Sans FB, Arial Black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
 
 .read-the-docs {
   color: #888;
+}
+
+
+.card{
+  position:relative;
+  left:50px;
+  width: 500px;
+  align-content: center;
+  font-family: Berlin Sans FB, Arial Black;
+
+  
+}
+
+
+.App{
+  background: #A9A9A9;
+  background: linear-gradient( #383a4e, #A9A9A9);
+}
+
+.Button{
+  color: white;
+}
+
+
+
+.barcode{
+  position: relative;
+  top: 40px;
+  left: 70px;
+  text-shadow: #888;
+}
+
+
+.texter{
+  border-radius: 25px;
+  width:95%;
+  font-size: 20px;
+  color:black;
 }
